@@ -1,0 +1,26 @@
+Esta aplicacion saca todos los datos que el intruso ha extraido por
+medio de error de syntaxis a traves del browser.
+
+Ejemplo:
+
+0. {]22'
+1. {]_volume_in_drive_c_is_system'
+2. {]_volume_serial_number_is_24ca-c152'
+3. {]_directory_of_c:\'
+4. {]04/08/2007__07:23p_____________428.544_1315.exe'
+5. {]21/07/2006__04:59p______<dir>__________ca_lic'
+6. {]22/01/2007__06:26p______<dir>__________documents_and_settings'
+7. {]04/08/2007__07:10p_______________1.087_down.vbs'
+8. {]14/07/2006__09:12p______<dir>__________drv'
+9. {]30/08/2006__11:46a______<dir>__________inetpub'
+10. {]31/05/2007__06:29p______<dir>__________marcelo'
+11. {]18/09/2007__01:06p______<dir>__________program_files'
+12. {]19/07/2006__12:55p______<dir>__________sql2ksp3'
+13. {]26/07/2006__11:01a______<dir>__________temp'
+14. {]01/09/2007__07:55p______<dir>__________winnt'
+15. {]21/07/2006__03:26p_________________302_winntagent.log'
+16. {]08/10/2007__04:53p_____________645.792_zabbix_agentd.log'
+17. {]01/10/2007__11:24p___________1.048.651_zabbix_agentd.log.old'
+18. {]_______________5_file(s)______2.124.376_bytes'
+19. {]_______________9_dir(s)___3.664.987.648_bytes_free'
+

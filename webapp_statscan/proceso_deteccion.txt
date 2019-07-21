@@ -1,0 +1,9 @@
+$rule =~ /(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(->|<>|<-)\s+(\S+)\s+(\S+)(.*)$/;
+$rest = $8;
+
+if ($rest =~ /content\s*:\s*"([^"]+).*/)
+$content=$1;
+
+push (@contents, $content);
+
+# Hasta aca lo que hice fue recirrer todas las reglas del *.rules y guarde los patrones (content:"") en array @contents. 

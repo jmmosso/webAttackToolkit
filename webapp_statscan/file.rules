@@ -1,0 +1,12 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"WEB-CLIENT Outlook EML access"; flow:from_client,established; content:"pia"; content:"pia2"; reference:nessus,10767; classtype:attempted-user; sid:1233; rev:11;)
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"WEB-CLIENT Outlook EML access"; flow:from_client,established; content:"jmanuel"; uricontent:"jmanuel2"; reference:nessus,10767; classtype:attempted-user; sid:1233; rev:11;)
+
+alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"WEB-CLIENT readme.eml autoload attempt"; flow:to_client,established; content:"window.open|28 22|readme.eml|22|"; nocase; reference:url,www.cert.org/advisories/CA-2001-26.html; classtype:attempted-user; sid:1290; rev:10;)
+
+alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"WEB-CLIENT readme.eml autoload attempt"; flow:to_client,established; content:"bosanova"; nocase; reference:url,www.cert.org/advisories/CA-2001-26.html; classtype:attempted-user; sid:1290; rev:10;)
+
+#-----------------
+
+content:"lineaunica"
+

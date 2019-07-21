@@ -1,0 +1,42 @@
+----------------------------------------------------------------
+Accion:.............Comando: creacion de tabla a traves de osql.
+Origen:.............200.32.65.87.
+Fecha:..............2007-10-08.
+Hora:...............19:55:27.
+Resultado: creacion de tabla:tmp_tmp, en la BD: osde_neo_v3.
+
+----------------------------------------------------------------
+Accion:.............Comando: insercion de datos de salida de comando shell en tabla.
+Origen:.............200.32.65.87.
+Fecha:..............2007-10-08.
+Hora:...............19:55:39.
+Resultado: ejecuci{on de comando de shell:''dir c:\'''))+'.
+
+----------------------------------------------------------------
+Accion:.............Extraccion de Informacion.
+Origen:.............200.32.65.87.
+Fecha:..............2007-10-08.
+Hora:...............19:55:42.
+Datos:..............{]_jmanuel volume_serial_number_is_24ca-c152'.
+
+----------------------------------------------------------------
+Accion:.............Comando: creacion de tabla a traves de osql.
+Origen:.............200.32.65.87.
+Fecha:..............2007-10-08.
+Hora:...............19:55:27.
+Resultado: creacion de tabla:tmp_tmp, en la BD:osde_neo_v3.
+
+----------------------------------------------------------------
+Accion:.............Comando: insercion de datos de salida de comando shell en tabla.
+Origen:.............200.32.65.87.
+Fecha:..............2007-10-08.
+Hora:...............19:55:39.
+Resultado: ejecuci{on de comando de shell:''dir c:\'''))+'.
+
+----------------------------------------------------------------
+Accion:.............Extraccion de Informacion.
+Origen:.............200.32.65.87.
+Fecha:..............2007-10-08.
+Hora:...............19:55:42.
+Datos:..............{]_jmanuel volume_serial_number_is_24ca-c152'.
+

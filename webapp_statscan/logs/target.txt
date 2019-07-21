@@ -1,0 +1,2 @@
+127.0.0.1 - - [14/Dec/2007:15:09:35 -0300] "GET ///////////////////select%20*%20form%20tables%20where%20cmd?%20   pia   HTTP/1.1" 404 317 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.8) Gecko/20071004 Iceweasel/2.0.0.8 (Debian-2.0.0.8-1)"
+127.0.0.1 - - [14/Dec/2007:15:09:35 -0300] "GET ///////////////////select%20*%20form%20tables%20where%20cmd?%20   window.open|28 22|readme.eml|22|   HTTP/1.1" 404 317 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.8) Gecko/20071004 Iceweasel/2.0.0.8 (Debian-2.0.0.8-1)"

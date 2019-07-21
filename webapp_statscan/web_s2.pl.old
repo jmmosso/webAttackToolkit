@@ -1,0 +1,255 @@
+#!/usr/bin/perl
+# webapp_statscan.pl 1.0
+# 12/12/2007
+# Juan Manuel Ramon (jmanuel@bacchuss.com.ar)
+
+require 'getopts.pl';
+
+# require destination and rule file or help
+
+#le agrego el modificador t para abrir el archivo a analizar "target"
+
+Getopts('f:t:d:h:x');
+if ($opt_h || (!$opt_d && !$opt_f && !$opt_t)) {
+die "Usage $0 -f <rule file> [-t <target file> || -d <target dir> ] [options]\
+\t-x debug\tTurn on debugging information.\
+\t-h help\t\tDuh? This is it.\n";
+}
+
+my $DEBUG = 0;
+if ($opt_x) { $DEBUG = 1; }
+
+my $refurls;
+$refurls{bugtraq} = "http://www.securityfocus.com/bid/";
+$refurls{cve} = "http://cve.mitre.org/cgi-bin/cvename.cgi?name=";
+$refurls{arachnids} = "http://www.whitehats.com/info/IDS";
+$refurls{mcafee} = "http://vil.nai.com/vil/dispVirus.asp?virus_k=";
+$refurls{url} = "http://";
+
+# parse some options if they exist or set default values
+
+chomp($forcesrc = `hostname`);
+
+# Agregado de reglas, tenemos los archivos de reglas limpios en @rules, una regla por renglon
+my @rulez = add_rules($opt_f);
+
+my $data_file = $opt_t;
+
+print "Procesando target: ............. $data_file";
+print "\n";
+
+sub add_rules
+{
+   my ($file) = @_;
+   my @rules;
+
+   open(RULES,$file) || die "No es posible abrir el archivo: $file!\n";
+   my @lines = <RULES>;
+
+# en @lines tengo todo el contenido del archivo de reglas
+   close (RULES);
+   foreach my $line (@lines) {
+      chomp ($line);
+
+if ($line =~ /^include (.*)$/) {
+          if ($opt_x) { print "Adding include of $1\n";}
+          my @line_rules = add_rules($1);
+          push (@rules,@line_rules);
+      }
+      else {push (@rules,$line);}
+
+
+   }
+
+   return (@rules);
+}
+
+# EN EL ARRAY RULES TENGO TODAS LAS REGLAS DEL ARCHIVO (-F)
+
+
+
+foreach $rule (@rulez) {
+
+
+my $dsize;
+        if ($rule =~ /^\s*#/ || $rule eq "\n") {
+                next;
+        }
+
+        # ALERT|LOG PROTO src srcport direction dst dstport
+        $rule =~ /(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(->|<>|<-)\s+(\S+)\s+(\S+)(.*)$/;
+
+  	$attack = $1;
+        $proto = $2;
+        $rule_src = $3;
+        $srcport = $4;
+        $direction = $5;
+        #$dst = $6;
+        $dstport = $7;
+        $rest = $8;
+
+#la variable $rest tiene los keywords de la regla de snort
+      
+        my $payload;
+        my $contents = $rest;
+
+#en $content guardo todos los content
+
+if ($contents =~ /content\s*:\s*"[^"]+.*/)
+        {
+
+           while ($contents =~ /content/)
+           {
+	           if ($contents =~ s/content:"([^"]+)\"\;\s+offset:(\d+)\;(.*)/$3/i)
+           {
+      
+              my $pad = 'A' x $offset;
+	
+		print "555. $pad\n";
+
+push (@contents,parse_content($pad . $tmp));
+}
+           elsif ($contents =~ s/content\s*:\s*"([^"]+)(.*)/$2/i)
+           {
+              push (@contents,parse_content($1));
+}
+           }
+  }
+
+
+#xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        elsif ($contents =~ /content\s*:\s*"[^"]+.*content\s*:\s*"[^"]+/)
+        {
+
+           while ($contents =~ /content/)
+           {
+           if ($contents =~ s/content:"([^"]+)\"\;\s+offset:(\d+)\;(.*)/$3/i)
+           {
+      
+              my $pad = 'A' x $offset;
+print "666. $pad\n";
+
+
+push (@contents,parse_content($pad . $tmp));
+}
+           elsif ($contents =~ s/content\s*:\s*"([^"]+)(.*)/$2/i)
+           {
+              push (@contents,parse_content($1));
+}
+           }
+  }
+
+
+foreach (@contents) { $payload = $payload . $_; 
+}
+
+        $ref = $rest;
+        my @refs;
+        while ($ref =~ s/(.*)reference:([^\;]+)(.*)$/$1 $3/)
+        {
+           my $tmp = $2;
+           if ($tmp =~ /(\w+),(.*)/i) { $tmp = $refurls{$1} . $2; }
+           push (@refs,$tmp);
+        }
+
+}
+
+
+
+#xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        if ($contents =~ /content\s*:\s*"[^"]+.*/)
+        {
+
+           while ($contents =~ /content/)
+           {
+           if ($contents =~ s/content:"([^"]+)\"\;\s+offset:(\d+)\;(.*)/$3/i)
+           {
+      
+              my $pad = 'A' x $offset;
+
+
+
+push (@contents,parse_content($pad . $tmp));
+}
+           elsif ($contents =~ s/content\s*:\s*"([^"]+)(.*)/$2/i)
+           {
+              push (@contents,parse_content($1));
+}
+           }
+  }
+foreach (@contents) { $payload = $payload . $_; }
+
+        $ref = $rest;
+        my @refs;
+        while ($ref =~ s/(.*)reference:([^\;]+)(.*)$/$1 $3/)
+        {
+           my $tmp = $2;
+           if ($tmp =~ /(\w+),(.*)/i) { $tmp = $refurls{$1} . $2; }
+           push (@refs,$tmp);
+        }
+
+
+
+
+#xxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+sub parse_content
+{
+   my ($content) = @_;
+
+# Proceso de patrones de detaccion que poseen un pipe al final de la estructura (fuerza busqueda de cualquier cosa, matchea siempre)
+
+		if ($content =~ m/(\|$)/i)
+		{ print "[ $content ] posee un pipe al final de la linea, regenerando...\n";
+		  $content =~ s/\|$//;   
+		}
+
+#print "111. $content";
+#print "\n";
+
+find_pattern ($content);
+return ();
+
+}
+
+
+sub find_pattern
+{
+my ($content) = @_;
+
+#print "222. $content en find";
+#print "\n";
+
+my $index = 0; 
+
+open DATA, "$data_file" or die "can't open $data_file $!";
+while (<DATA>)
+      {
+	foreach my $line (<DATA>)
+	{
+$index=$index+1;
+
+#print "333. $content en while\n";
+#print "\n";
+#print "333. $content buscado en:\n";
+#print "333. $line\n";
+
+		if ($line =~ m/($content)/i)
+		{ print "la palabra [ $content ] ha sido detectada en la linea $index\n";
+		  }
+	
+
+}
+
+	}
+close (DATA);
+}
+
+exit (0);

@@ -1,0 +1,44 @@
+COMM:   Creacion de tabla: [tmp_tmp], en la BD: [osde_neo_v3].
+COMM:   Ejecucion de comando shell: [''dir c:\'''))+'].
+EXTR:   {]22'.
+EXTR:   {]_volume_in_drive_c_is_system'.
+EXTR:   {]_volume_serial_number_is_24ca-c152'.
+EXTR:   {]_directory_of_c:\'.
+EXTR:   {]04/08/2007__07:23p_____________428.544_1315.exe'.
+EXTR:   {]21/07/2006__04:59p______<dir>__________ca_lic'.
+EXTR:   {]22/01/2007__06:26p______<dir>__________documents_and_settings'.
+EXTR:   {]04/08/2007__07:10p_______________1.087_down.vbs'.
+EXTR:   {]14/07/2006__09:12p______<dir>__________drv'.
+EXTR:   {]30/08/2006__11:46a______<dir>__________inetpub'.
+EXTR:   {]31/05/2007__06:29p______<dir>__________marcelo'.
+EXTR:   {]18/09/2007__01:06p______<dir>__________program_files'.
+EXTR:   {]19/07/2006__12:55p______<dir>__________sql2ksp3'.
+EXTR:   {]26/07/2006__11:01a______<dir>__________temp'.
+EXTR:   {]01/09/2007__07:55p______<dir>__________winnt'.
+EXTR:   {]21/07/2006__03:26p_________________302_winntagent.log'.
+EXTR:   {]08/10/2007__04:53p_____________645.792_zabbix_agentd.log'.
+EXTR:   {]01/10/2007__11:24p___________1.048.651_zabbix_agentd.log.old'.
+EXTR:   {]_______________5_file(s)______2.124.376_bytes'.
+EXTR:   {]_______________9_dir(s)___3.664.987.648_bytes_free'.
+COMM:   Creacion de tabla: [tmp_tmp], en la BD: [osde_neo_v3].
+COMM:   Ejecucion de comando shell: [''dir c:\'''))+'].
+EXTR:   {]22'.
+EXTR:   {]_volume_in_drive_c_is_system'.
+EXTR:   {]_volume_serial_number_is_24ca-c152'.
+EXTR:   {]_directory_of_c:\'.
+EXTR:   {]04/08/2007__07:23p_____________428.544_1315.exe'.
+EXTR:   {]21/07/2006__04:59p______<dir>__________ca_lic'.
+EXTR:   {]22/01/2007__06:26p______<dir>__________documents_and_settings'.
+EXTR:   {]04/08/2007__07:10p_______________1.087_down.vbs'.
+EXTR:   {]14/07/2006__09:12p______<dir>__________drv'.
+EXTR:   {]30/08/2006__11:46a______<dir>__________inetpub'.
+EXTR:   {]31/05/2007__06:29p______<dir>__________marcelo'.
+EXTR:   {]18/09/2007__01:06p______<dir>__________program_files'.
+EXTR:   {]19/07/2006__12:55p______<dir>__________sql2ksp3'.
+EXTR:   {]26/07/2006__11:01a______<dir>__________temp'.
+EXTR:   {]01/09/2007__07:55p______<dir>__________winnt'.
+EXTR:   {]21/07/2006__03:26p_________________302_winntagent.log'.
+EXTR:   {]08/10/2007__04:53p_____________645.792_zabbix_agentd.log'.
+EXTR:   {]01/10/2007__11:24p___________1.048.651_zabbix_agentd.log.old'.
+EXTR:   {]_______________5_file(s)______2.124.376_bytes'.
+EXTR:   {]_______________9_dir(s)___3.664.987.648_bytes_free'.

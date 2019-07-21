@@ -1,0 +1,15 @@
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"super ataque .00."; depth:8; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:successful-admin; sid:1900; rev:10;)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"../"; depth:8; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:successful-admin; sid:1900; rev:10;)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"*GOBBLE*"; depth:8; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:successful-admin; sid:1900; rev:10;)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"jmanuel";)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"pia";)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"GET";)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"/HTTP/script/xsript=?pia";)
+
+alert tcp $HOME_NET 749 -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES successful kadmind buffer overflow attempt"; flow:established,from_server; content:"..../"; depth:8; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:successful-admin; sid:1900; rev:10;)
